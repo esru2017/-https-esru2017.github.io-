@@ -1,0 +1,11 @@
+# render.yaml
+services:
+  - type: web
+    name: kfs-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_ATLAS_URI
+        value: your_mongodb_connection_string
